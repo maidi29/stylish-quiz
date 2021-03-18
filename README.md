@@ -10,6 +10,14 @@ Questions and result texts (for differen point ranges) can be inserted through J
 
 ## Usage
 
+
+### HTML
+
+````
+<script type="module" src="https://unpkg.com/stylish-quiz@1.0.4"></script>
+<quiz-component restart="Try again!"></quiz-component>
+````
+
 ### Javascript
 
 ```
@@ -63,11 +71,4 @@ quiz-component {
   --font_size_result: 1.2rem;
   --font_size_restart: 1rem;
 }
-````
-
-### HTML
-
-````
-<script type="module" src="https://unpkg.com/stylish-quiz@1.0.2"></script>
-<quiz-component restart="Try again!"></quiz-component>
 ````
