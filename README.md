@@ -4,13 +4,13 @@ Simple and stylish quiz web-component.
 Colors and Font adaptable through CSS Variables.
 Questions and result texts (for differen point ranges) can be inserted through JSON into attributes.
 
-##Screenshots
+## Screenshots
 ![Desktop View](https://raw.githubusercontent.com/maidi29/stylish-quiz/screenshots/screenshots/desktop.PNG)
 ![Mobile View](https://raw.githubusercontent.com/maidi29/stylish-quiz/screenshots/screenshots/mobile.PNG)
 
-##Usage
+## Usage
 
-###Javascript
+### Javascript
 
 ```
 const questions =
@@ -49,7 +49,7 @@ const result =
 document.querySelector('quiz-component').setAttribute('questions', questions);
 document.querySelector('quiz-component').setAttribute('result', result);
 ``````
-###CSS
+### CSS
 
 ```
 quiz-component { 
@@ -65,7 +65,7 @@ quiz-component {
 }
 ````
 
-###HTML
+### HTML
 
 ````
 <script type="module" src="https://unpkg.com/stylish-quiz@1.0.2"></script>
