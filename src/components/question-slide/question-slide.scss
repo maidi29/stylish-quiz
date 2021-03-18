@@ -1,0 +1,101 @@
+:host {
+  display: block;
+}
+
+.answers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.question-card {
+  font-size: $font_size_question;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin: 0.5rem;
+  background-color: $color_primary;
+  color: $color_secondary;
+  font-family: $font_type;
+}
+
+.card__inner {
+  border: 1px solid $color_secondary;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.run-animation {
+  animation: grow .5s;
+}
+
+.answer-card {
+  font-size: $font-size_answer;
+  flex-grow: 1;
+  flex-basis: 100%;
+  cursor: pointer;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+
+.answer-card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: $color_primary_highlight;
+  height: 6px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.answer-card:active {
+  background-color: $color_primary_bright;
+}
+
+@media (hover: hover) {
+  .answer-card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: $color_primary_highlight;
+    height: 6px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .answer-card:hover:before, .answer-card:focus:before, .answer-card:active:before {
+    left: 0;
+    right: 0;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .answer-card {
+    flex-basis: 40%;
+  }
+}
