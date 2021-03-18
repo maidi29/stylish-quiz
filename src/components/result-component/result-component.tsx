@@ -8,15 +8,16 @@ import {Component, Host, h, Prop, EventEmitter, Event} from '@stencil/core';
 export class ResultComponent {
   @Prop() points?: number = 0;
   @Prop() text?: string = "";
+  @Prop() restart?: string;
 
-  @Event() restart: EventEmitter<boolean>;
+  @Event() restartAction: EventEmitter<boolean>;
 
   render() {
     return (
       <Host>
         <div class={'results'}>
           <div class={'text'}>{this.text}</div>
-          <button onClick={()=>this.restart.emit(true)}>Neu starten</button>
+          {this.restart && (<button onClick={()=>this.restartAction.emit(true)}>{this.restart}</button>)}
         </div>
       </Host>
     );

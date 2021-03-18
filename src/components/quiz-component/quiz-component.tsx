@@ -21,6 +21,7 @@ export class QuizComponent {
 
   @Prop({reflect: true, mutable: true}) questions?: string;
   @Prop({reflect: true, mutable: true}) result?: string;
+  @Prop({reflect: false}) restart?: string;
 
   @State() activeQuestionIndex = 0;
 
@@ -46,7 +47,7 @@ export class QuizComponent {
     this.scrollToQuestion();
   }
 
-  @Listen('restart')
+  @Listen('restartAction')
   restartHandler() {
     this.pointsTotal = 0;
     this.activeQuestionIndex = 0;
@@ -103,7 +104,7 @@ export class QuizComponent {
       <Host>
         {this.allQuestions.length > 0 ?
           this.activeQuestionIndex >= this.allQuestions.length ?
-            <result-component points={this.pointsTotal} text={this.resultObject[this.pointsTotal]}/>
+            <result-component points={this.pointsTotal} text={this.resultObject[this.pointsTotal]} restart={this.restart}/>
           : this.allQuestions.map((quest: Question) =>
               quest.index === this.activeQuestionIndex ? <question-slide text={quest.question} answers={quest.answers} index={quest.index}/> : null
             )

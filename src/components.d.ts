@@ -13,10 +13,12 @@ export namespace Components {
     }
     interface QuizComponent {
         "questions"?: string;
+        "restart"?: string;
         "result"?: string;
     }
     interface ResultComponent {
         "points"?: number;
+        "restart"?: string;
         "text"?: string;
     }
 }
@@ -54,11 +56,13 @@ declare namespace LocalJSX {
     }
     interface QuizComponent {
         "questions"?: string;
+        "restart"?: string;
         "result"?: string;
     }
     interface ResultComponent {
-        "onRestart"?: (event: CustomEvent<boolean>) => void;
+        "onRestartAction"?: (event: CustomEvent<boolean>) => void;
         "points"?: number;
+        "restart"?: string;
         "text"?: string;
     }
     interface IntrinsicElements {
