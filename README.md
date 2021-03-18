@@ -6,7 +6,9 @@ Questions and result texts (for different point ranges) can be inserted through 
 ## Demo
 See it in action and play around:
 
-⚡https://jsfiddle.net/maidi/o90hzqdk/⚡
+⚡
+https://jsfiddle.net/maidi/o90hzqdk/
+⚡
 
 ## Screenshots
 ![Desktop View](https://raw.githubusercontent.com/maidi29/stylish-quiz/screenshots/screenshots/desktop.PNG)
@@ -18,7 +20,7 @@ See it in action and play around:
 ### HTML
 
 ````
-<script type="module" src="https://unpkg.com/stylish-quiz@1.0.5"></script>
+<script type="module" src="https://unpkg.com/stylish-quiz@1.0.6"></script>
 <quiz-component restart="Try again!"></quiz-component>
 ````
 
