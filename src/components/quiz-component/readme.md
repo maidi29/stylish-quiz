@@ -10,7 +10,7 @@
 | Property    | Attribute   | Description | Type     | Default     |
 | ----------- | ----------- | ----------- | -------- | ----------- |
 | `questions` | `questions` |             | `string` | `undefined` |
-| `results`   | `results`   |             | `string` | `undefined` |
+| `result`    | `result`    |             | `string` | `undefined` |
 
 
 ## Dependencies

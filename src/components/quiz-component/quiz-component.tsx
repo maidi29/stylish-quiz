@@ -20,12 +20,12 @@ export class QuizComponent {
   @Element() host: HTMLQuizComponentElement;
 
   @Prop({reflect: true, mutable: true}) questions?: string;
-  @Prop({reflect: true, mutable: true}) results?: string;
+  @Prop({reflect: true, mutable: true}) result?: string;
 
   @State() activeQuestionIndex = 0;
 
   private allQuestions: Question[];
-  private allResults: Result[];
+  private allResult: Result[];
   private resultObject = {};
   private pointsTotal = 0;
 
@@ -34,9 +34,9 @@ export class QuizComponent {
     this.setupResultsOrQuestions('questions');
   }
 
-  @Watch('results')
+  @Watch('result')
   watchHandlerResults(): void {
-    this.setupResultsOrQuestions('results');
+    this.setupResultsOrQuestions('result');
   }
 
   @Listen('answerClick')
@@ -55,7 +55,7 @@ export class QuizComponent {
 
   componentWillLoad(): void {
     this.setupResultsOrQuestions('questions');
-    this.setupResultsOrQuestions('results');
+    this.setupResultsOrQuestions('result');
     this.createResultObject();
   }
 
@@ -71,15 +71,15 @@ export class QuizComponent {
   }
 
   private createResultObject(): void {
-    this.allResults.map(result => {
-      if (result.points.indexOf('-') !== -1) {
-        const pointsArray = result.points.split('-');
+    this.allResult.map(res => {
+      if (res.points.indexOf('-') !== -1) {
+        const pointsArray = res.points.split('-');
         const range = this.createRange(parseInt(pointsArray[0], 10), parseInt(pointsArray[1], 10), 1);
         range.forEach((num: number) => {
-          Object.assign(this.resultObject, {[num]: result.text});
+          Object.assign(this.resultObject, {[num]: res.text});
         })
       } else {
-        Object.assign(this.resultObject, {[result.points]: result.text});
+        Object.assign(this.resultObject, {[res.points]: res.text});
       }
     });
   }

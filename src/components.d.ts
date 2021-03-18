@@ -13,7 +13,7 @@ export namespace Components {
     }
     interface QuizComponent {
         "questions"?: string;
-        "results"?: string;
+        "result"?: string;
     }
     interface ResultComponent {
         "points"?: number;
@@ -54,7 +54,7 @@ declare namespace LocalJSX {
     }
     interface QuizComponent {
         "questions"?: string;
-        "results"?: string;
+        "result"?: string;
     }
     interface ResultComponent {
         "onRestart"?: (event: CustomEvent<boolean>) => void;
