@@ -1,6 +1,6 @@
 {
   "name": "stylish-quiz",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple, stylish and responsive quiz Web Component",
   "keywords": [
     "quiz",
@@ -45,6 +45,6 @@
     "url": "https://github.com/maidi29/stylish-quiz.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
