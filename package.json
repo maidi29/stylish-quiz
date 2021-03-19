@@ -45,6 +45,6 @@
     "url": "https://github.com/maidi29/stylish-quiz.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   }
 }
