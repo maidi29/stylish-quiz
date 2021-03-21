@@ -18,7 +18,7 @@ https://jsfiddle.net/maidi/o90hzqdk/
 ## Usage
 Integrate the package script:
 ````html
-<script type="module" src="https://unpkg.com/stylish-quiz@1.0.7"></script>
+<script type="module" src="https://unpkg.com/stylish-quiz@1.0.8"></script>
 ````
 #### Option 1: Pure HTML
 `JSON.stringify` your questions and result object arrays before adding them to HTML and you have no need for JavaScript:
