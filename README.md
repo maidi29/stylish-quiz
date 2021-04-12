@@ -1,4 +1,6 @@
 # stylish-quiz
+[![npm](https://flat.badgen.net/npm/v/stylish-quiz)](https://www.npmjs.com/package/stylish-quiz)
+
 Simple, stylish and responsive quiz Web Component
 
 Colors and Font are adaptable through CSS Variables.
